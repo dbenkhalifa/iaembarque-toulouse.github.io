@@ -12,10 +12,38 @@
     a:hover { text-decoration: underline; }
 
     /* Menu fixe */
-    nav { position: fixed; top: 0; width: 100%; background: #fff; border-bottom: 1px solid #ddd; z-index: 1000; }
-    nav ul { list-style: none; display: flex; justify-content: center; padding: 1rem; }
-    nav li { margin: 0 1.5rem; font-weight: bold; }
-    nav a { color: #004080; }
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* espace entre menu et logo */
+    max-width: 1100px;
+    margin: auto;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav li {
+    font-weight: bold;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
+}
   .logos img {
     max-height: 80px;       
     width: auto;            
@@ -46,15 +74,19 @@ header p { font-size: 1.1rem; }
 </style>
 </head>
 <body>
+Ajoutez le logo dans le <nav> mais en dehors du <ul> :
 
 <nav>
-    <ul>
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#news">Actualités</a></li>
-        <li><a href="#collaborators">Collaborateurs</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <div class="nav-container">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#news">Actualités</a></li>
+            <li><a href="#collaborators">Collaborateurs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    </ul>
+        <img src="images/aniti.png" alt="ANITI" class="nav-logo">
+    </div>
 </nav>
 
 <header>
